@@ -17,5 +17,15 @@ const store = useWeatherStore()
 const iconClima = computed(()=>store.temperatura > 25? '-' : '-')
 
 //5. ciclo de vida
-
+onMounted(() => console.log('Componente listo'))
 </script>
+
+
+<template>
+<div class="weather-card">
+    <span>{{ iconClima }}</span>
+    <p>{{ store.temperatura }}</p>
+
+</div>
+
+</template>
