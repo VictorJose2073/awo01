@@ -22,10 +22,25 @@ onMounted(() => console.log('Componente listo'))
 
 
 <template>
-<div class="weather-card">
-    <span>{{ iconClima }}</span>
-    <p>{{ store.temperatura }}</p>
+    <div class="weather-card">
+        <span>{{ iconClima }}</span>
+        <p>{{ store.temperatura }} °C</p>
+        <button class="masinfo" @click="extra = !extra">
+            {{ extra? 'Menos info' : 'Más info' }}
 
-</div>
+        </button>
+    </div>
 
 </template>
+<style scoped>
+/* scoped = estilos que se aplican a este componente */
+
+.weather-card{
+    padding: 24px;
+    border-radius: 12px;
+}
+
+</style>
+
+
+
